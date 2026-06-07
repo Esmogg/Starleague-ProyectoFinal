@@ -1,145 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Starleague</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starleague</title>
+        <link rel="icon" type="image/png" href="images/logo.png"/>
 
-    <link rel="icon" type="image/png" href="images/logo.png">
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
+    </head>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
+    <body>
+        <div class="contenedor">
+            <header>
+                <button id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+				
+				<img src="images/logo.png" alt="Logo Starleague" class="logo">
 
-<body>
+                <div class="title">☆ Starleague ☆</div>
+            </header>
 
-    <div class="contenedor">
+            <div class="contenido">
+                <aside>
+                    <div id="barraNavegacion">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a class="activo" href="index.html"><i class="fa-solid fa-house"></i>
+                                        Inicio
+                                    </a>
+                                </li>
 
-        <header>
-            <button id="menuBtn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+                                <li class="menu-grupo">
+                                    <div class="menu-padre">
+                                        <i class="fa-solid fa-trophy"></i>
+                                        Torneos
+                                    </div>
 
-            <div class="title">
-                ☆ Starleague ☆
+                                    <ul class="submenu">
+                                        <li><a href="ver_torneos.html">Ver Torneos</a></li>
+                                        <li><a href="crear_torneos.html">Crear Torneo</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-grupo">
+                                    <div class="menu-padre">
+                                        <i class="fa-solid fa-users"></i>
+                                        Equipos
+                                    </div>
+
+                                    <ul class="submenu">
+                                        <li><a href="buscar_equipos.html">Buscar Equipos</a></li>
+                                        <li><a href="crear_equipos.html">Crear Equipo</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-grupo">
+                                    <div class="menu-padre">
+                                        <i class="fa-solid fa-gamepad"></i>
+                                        Partidas
+                                    </div>
+
+                                    <ul class="submenu">
+                                        <li><a href="partidas_resultados.html">Resultados</a></li>
+                                        <li><a href="partidas_calificaciones.html">Calificaciones</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-grupo">
+                                    <div class="menu-padre">
+                                        <i class="fa-solid fa-user"></i>
+                                        Usuario
+                                    </div>
+
+                                    <ul class="submenu">
+                                        <li><a href="usuario_perfil.html">Perfil</a></li>
+										<li><a href="usuario_config.html">Configuración</a></li>
+											
+                                        <!-- 
+										<li><a href="#">Iniciar Sesión</a></li>
+                                        <li><a href="#">Registrarse</a></li>
+										--> 
+                                    </ul>
+                                </li>
+
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+                <main>
+                    <article>
+                        <h1>¿Que es?</h1>
+                        <p>
+                            Starleague es un Sistema de Gestión Deportiva Modular
+							(SGDM), una plataforma web orientada a la organización,
+							administración y seguimiento de competencias deportivas,
+							mentales y electrónicas. El sistema permite gestionar
+							para cada tipo de competencia.
+                        </p>
+                        <p>
+                            Se desarrollará utilizando PHP para el backend. HTML,
+							CSS y JavaScript para el frontend y MySQL como gestión
+							de base de datos relacional. La arquitectura seguirá 
+							el patrón MVC (Modelo Vista-Controlador).
+                        </p>
+                    </article>
+                    <article>
+                        <h1>¿Cuales son las funcionalidades?</h1>
+                        <p>
+                            El SGDM contempla tres tipos de competencias: Liga
+							(Sistema todos contra todos con tabla acumulativa de
+							puntos), Eliminación directa (el perdedor queda eliminado)
+							y Sistema Suizo (emparejamiento por rendimiento acumulado).
+							Cada formato tiene su propia lógica de generación de
+							enfrentamiento y cálculo de posiciones, todo automatizado
+							gracias al sistema.
+                        </p>
+                        <p>
+                            Estará orientado a clubes deportivos, centros educativos,
+							organizadores independientes y comunidades de deportes
+							electrónicos o de mesa, permitiendo administrar participantes,
+							rondas, resultados y tabla de posiciones desde el panel centralizado.
+                        </p>
+                    </article>
+                </main>
             </div>
-        </header>
-
-        <div class="contenido">
-            <aside>
-                <div id="barraNavegacion">
-                    <nav>
-                        <ul>
-
-                            <li>
-                                <a class="activo" href="index.html">
-                                    <i class="fa-solid fa-house"></i>
-                                    Inicio
-                                </a>
-                            </li>
-
-                            <li class="menu-grupo">
-                                <div class="menu-padre">
-                                    <i class="fa-solid fa-trophy"></i>
-                                    Torneos
-                                </div>
-
-                                <ul class="submenu">
-                                    <li><a href="#">Ver Torneos</a></li>
-                                    <li><a href="#">Crear Torneo</a></li>
-                                    <li><a href="#">Inscribirse</a></li>
-                                    <li><a href="#">Ver Historial</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="menu-grupo">
-                                <div class="menu-padre">
-                                    <i class="fa-solid fa-users"></i>
-                                    Equipos
-                                </div>
-
-                                <ul class="submenu">
-                                    <li><a href="#">Buscar Equipos</a></li>
-                                    <li><a href="#">Crear Equipo</a></li>
-                                    <li><a href="#">Perfil de Equipos</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="menu-grupo">
-                                <div class="menu-padre">
-                                    <i class="fa-solid fa-gamepad"></i>
-                                    Partidas
-                                </div>
-
-                                <ul class="submenu">
-                                    <li><a href="#">Calendario</a></li>
-                                    <li><a href="#">Resultados</a></li>
-                                    <li><a href="#">Calificaciones</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="menu-grupo">
-                                <div class="menu-padre">
-                                    <i class="fa-solid fa-user"></i>
-                                    Usuario
-                                </div>
-
-                                <ul class="submenu">
-                                    <li><a href="#">Perfil</a></li>
-                                    <li><a href="#">Iniciar Sesión</a></li>
-                                    <li><a href="#">Registrarse</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="fa-solid fa-newspaper"></i>
-                                    Noticias
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <i class="fa-solid fa-gear"></i>
-                                    Configuración
-                                </a>
-                            </li>
-
-                        </ul>
-                    </nav>
-                </div>
-            </aside>
-            <main>
-                <article>
-                    <h1>¿Que es?</h1>
-                    <p>Starleague es un Sistema de Gestión Deportiva Modular (SGDM), una plataforma web orientada a la organización, administración y 
-                        seguimiento de competencias deportivas, mentales y electrónicas, El sistema permite gestionar torneos de diferentes tipos desde una única pagina, evitando el uso 
-                        de soluciones separadas o plantillas manuales para cada tipo de competencia.
-                    </p>
-                    <p>El sistema se desarrollara utilizando PHP para el backend, HTML, CSS y JavaScript para el frontend, 
-                        y MySQL como gestor de base de datos relacional. La arquitectura seguirá el patrón 
-                        Modelo-Vista.Controlador (MVC)
-                    </p>
-                </article>
-                <article>
-                    <h1>¿Cuales son las funcionalidades?</h1>
-                    <p>El SGDM contempla tres tipos de competencia: liga (todos contra todos con acumulacion de puntos), eliminación directa (el perdedor queda eliminado) 
-                        y sistema suizo (emparejamiento por rendimiento acumulado). Cada formato tiene su propia lógica de generación de enfrentamiento y cálculo de posiciones, 
-                        todo automatizado por el sistema.
-                    </p>
-                    <p>El sistema estará orientado a clubes deportivos, instituciones educativas, organizadores independientes y comunidades de deportes 
-                        electrónicos o de mesa, permitiendo administrar participantes, rondas, resultados y tabla de posiciones desde el panel centralizado.
-                    </p>
-                </article>
-                
-            </main>
-
+            <footer>© 2026 - Todos los derechos reservados.</footer>
         </div>
-            <footer>
-                © 2026 - Todos los derechos reservados.
-            </footer>
-    </div>
-	<script src="script.js" defer></script>
-</body>
+        <script src="script.js" defer></script>
+    </body>
 </html>

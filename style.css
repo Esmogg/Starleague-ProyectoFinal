@@ -8,14 +8,14 @@
 
     --color-boton-select: #5591eb;
 
-    --color-aside-bg: #5983EA;
+    --color-aside-bg: #5983ea;
+
+    --color-content-bg: #dce4f8;
 
     --color-boxshadow: #96b7ff94;
 
-    --color-content-bg: #bdc9e9;
-
-    --color-primary: #74b0ff;
-    --color-secondary: #0b57bb;
+    --color-primary: #83b9ff;
+    --color-secondary: #1960bd;
     --color-third: #3d82dd;
 }
 
@@ -27,13 +27,12 @@
 
 body {
     display: flex;
-    background-color: #ffffff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 20px 80px;
-
+    background-image: url("images/bg/perfect_hue_49.jpg");
+    background-size: cover;
     overflow-y: auto;
 }
-
 
 main {
     flex: 1;
@@ -108,20 +107,43 @@ aside {
 }
 
 header {
+	display: flex;
     position: relative;
     top: 0;
-    z-index: -2;
+    z-index: 1;
+	
+	align-items: center;
+    justify-content: center;
 
-    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary), var(--color-third));
+    background: linear-gradient(
+        to bottom,
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-third)
+    );
     color: var(--color-texto-claro);
     border: var(--color-boton-border) 1px solid;
     box-shadow: inset 0px 0px 1px 5px var(--color-boxshadow);
 
     padding: 20px;
 
-
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
+}
+
+.logo{
+    position: absolute;
+    left: 15px;
+    width: 80px;
+    height: auto;
+	z-index: 10;
+	
+	transition: transform 0.2s ease;
+}
+
+.logo:hover{
+    transform: rotate(-5deg);
+    cursor: pointer;
 }
 
 .title {
@@ -135,12 +157,12 @@ header {
 }
 
 h1 {
-    padding-bottom: 10px;
-    text-shadow: 2px 3px #05449652;
+    padding-bottom: 15px;
+    text-shadow: 2px 3px #1863c43a;
 }
 
 p {
-    padding-bottom: 20px;
+    padding-bottom: 27px;
     padding-left: 8px;
 }
 
@@ -158,7 +180,12 @@ nav ul {
 
     padding: 10px;
 
-    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary), var(--color-third));
+    background: linear-gradient(
+        to bottom,
+        var(--color-primary),
+        var(--color-secondary),
+        var(--color-third)
+    );
     border: var(--color-boton-border) 1px solid;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -196,9 +223,11 @@ nav a {
     color: var(--color-texto-claro2);
     padding: 10px;
     border-radius: 8px;
-    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+    transition:
+        color 0.3s,
+        transform 0.3s,
+        background-color 0.3s;
 }
-
 
 nav a.activo {
     color: var(--color-boton-activo);
@@ -209,7 +238,6 @@ nav a:hover {
     color: var(--color-boton-hover);
     background-color: var(--color-boton-select);
 }
-
 
 footer {
     position: fixed;
@@ -224,8 +252,7 @@ footer {
     border-radius: 15px;
 }
 
-@media(max-width:390px) {
-
+@media (max-width: 390px) {
     header {
         display: flex;
         align-items: center;
@@ -239,16 +266,19 @@ footer {
 
         border-top-left-radius: 0em;
         border-top-right-radius: 0em;
-
     }
 
     .title {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
+	
+	.logo{
+		visibility: hidden;
+	}
 
     #menuBtn {
         position: absolute;
-        left: 30px;
+        left: 20px;
 
         display: block;
         background: none;
@@ -256,7 +286,6 @@ footer {
 
         color: var(--color-texto-claro2);
         font-size: 1.5rem;
-        cursor: pointer;
     }
 
     .contenido {
@@ -271,6 +300,8 @@ footer {
 
     body {
         padding: 0;
+		background-image: url("images/bg/perfect_hue_mobile_38.jpg");
+		background-size: cover;
     }
 
     body.menu-abierto {
@@ -285,10 +316,9 @@ footer {
         width: 200px;
         height: 80vh;
 
-
         overflow-y: auto;
         overflow-x: hidden;
-        transition: left .3s;
+        transition: left 0.3s;
 
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 8px;
