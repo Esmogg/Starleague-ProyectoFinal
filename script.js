@@ -1,3 +1,4 @@
+/* Menu Lateral */
 const menuBtn = document.getElementById("menuBtn");
 const aside = document.querySelector("aside");
 const menuOverlay = document.getElementById("menuOverlay");
@@ -18,6 +19,7 @@ menuOverlay.addEventListener("click", () => {
 	document.documentElement.classList.remove("menu-abierto");
 });
 
+/* Modo oscuro */
 const darkModeToggle = document.getElementById("darkModeToggle");
 
 /* Cargar preferencia guardada */
@@ -48,3 +50,19 @@ if (darkModeToggle) {
 
     });
 }
+
+/* Boton de subida de la pagina */
+const btnSubir = document.getElementById("btnSubir");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 65) {
+        console.log("Mostrar");
+        btnSubir.classList.add("visible");
+    } else {
+        btnSubir.classList.remove("visible");
+    }
+});
+
+btnSubir.addEventListener("click", () => {
+    window.scrollTo({top: 0});
+});
